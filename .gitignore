@@ -1,0 +1,10 @@
+checkpoints/
+data/NEU-DET/train
+data/NEU-DET/valid
+data/samples/*.jpg
+detection_result/
+output/
+model/
+result/
+weights/
+__pycache__

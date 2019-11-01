@@ -1,0 +1,6 @@
+matplotlib
+pillow
+tqdm
+opencv-python
+matplotlib
+glob
