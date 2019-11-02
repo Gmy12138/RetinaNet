@@ -1,5 +1,5 @@
 # RetinaNet
-### pytorch 1.3 and python 3.6 is suppoted
+### pytorch 1.3 and python 3.6 is supported
 A PyTorch implementation of RetinaNet, with support for training, inference and evaluation.
 
 ## Introduction
@@ -34,11 +34,11 @@ DE: Data Enhancement
 
 
 ## Inference
-Uses pretrained weights to make predictions on images. The ResNet-50 measurement marked shows the inference time of this implementation on my 2080ti card.
+Uses pretrained weights to make predictions on images. The ResNet-50 measurement marked shows the inference time of this implementation on GPU 2080ti.
 
 | Backbone                | GPU      | FPS      |
 | ----------------------- |:--------:|:--------:|
-| ResNet-50               | 2080ti   |          |
+| ResNet-50               | 2080ti   |   10     |
 
 
 
