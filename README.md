@@ -23,22 +23,21 @@ The method of RetinaNet was used to perform defect detection on NEU surface defe
     
 ## Test
 Evaluates the model on NEU-DET test.
-```
-WDE: Without Data Enhancement    
-DE: Data Enhancement
-```
 
-| Model                   | mAP (min. 50 IoU) |
-| ----------------------- |:-----------------:|
-| RetinaNet 300 (DE)      | 61.3              |
+
+| Model      |Image Size|   Data Enhancement      | mAP (min. 50 IoU) |
+|:----------:|:--------:|:-----------------------:|:-----------------:|
+| RetinaNet  |300       |      YES                | 61.3              |
+
 
 
 ## Inference
 Uses pretrained weights to make predictions on images. The ResNet-50 measurement marked shows the inference time of this implementation on GPU 2080ti.
 
-| Backbone                | GPU      | FPS      |
-| ----------------------- |:--------:|:--------:|
-| ResNet-50               | 2080ti   |   10     |
+
+| Backbone         |  Image Size     | GPU      | FPS      |
+|:----------------:|:---------------:|:--------:|:--------:|
+| ResNet-50        |     300         | 2080ti   |  27      |
 
 
 

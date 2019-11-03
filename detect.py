@@ -70,8 +70,9 @@ dataloader = DataLoader(
         num_workers=args.n_cpu,
     )
 
-prev_time = time.time()
+TIME=0
 for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
+    prev_time = time.time()
 
     if torch.cuda.is_available():
         input_imgs = input_imgs.cuda()
@@ -84,8 +85,11 @@ for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
     boxes, labels, scores = encoder.decode(loc_preds.data, cls_preds.data, 0.2, (args.img_size, args.img_size))
 
     current_time = time.time()
-    inference_time = datetime.timedelta(seconds=current_time - prev_time)
-    prev_time = current_time
+    inference_time = current_time - prev_time
+
+    if batch_i != 0:
+        TIME += inference_time
+
     print("\t+ Batch %d, Inference Time: %s" % (batch_i, inference_time))
 
     cmap = plt.get_cmap("tab20b")
@@ -135,5 +139,6 @@ for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
     filename = img_paths[0].split("/")[-1].split(".")[0]
     plt.savefig(f"output/{filename}.jpg", bbox_inches="tight",pad_inches=0.0)
     plt.close()
+print("FPS: %s" % (1/(TIME/5)))
 
 

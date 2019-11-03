@@ -8,7 +8,7 @@ from utils import meshgrid, box_iou, box_nms, change_box_order
 class DataEncoder:
     def __init__(self):
         # p3 -> p7
-        self.anchor_areas = [32*32., 64*64., 128*128., 256*256., 512*512.]  # map=0.6071   ckpt_320
+        # self.anchor_areas = [32*32., 64*64., 128*128., 256*256., 512*512.]  # map=0.6071   ckpt_320
         # self.anchor_areas = [16*16., 32*32., 64*64., 128*128., 256*256.]    # map=0.571   ckpt_2398
         # self.anchor_areas = [18*18., 36*36., 72*72., 144*144., 288*288.]    # map=0.572   ckpt_2605
         # self.anchor_areas = [20*20., 40*40., 80*80., 160*160., 320*320.]    # map=0.573   ckpt_2316
@@ -16,7 +16,7 @@ class DataEncoder:
         # self.anchor_areas = [23*23., 46*46., 92*92., 184*184., 368*368.]    # map=
         # self.anchor_areas = [24*24., 48*48., 96*96., 192*192., 384*384.]    # map=0.605   ckpt_1672
         # self.anchor_areas = [25*25., 50*50., 100*100., 200*200., 400*400.]  # map=0.597   ckpt_1073
-        # self.anchor_areas = [26*26., 52*52., 104*104., 208*208., 416*416.]  # map=0.613   ckpt_1744
+        self.anchor_areas = [26*26., 52*52., 104*104., 208*208., 416*416.]  # map=0.613   ckpt_1744
         # self.anchor_areas = [27*27., 54*54., 108*108., 216*216., 432*432.]  # map=0.599   ckpt_1558
         # self.anchor_areas = [28*28., 56*56., 112*112., 221*224., 448*448.]  # map=0.600   ckpt_1403
         # self.anchor_areas = [30*30., 60*60., 120*120., 240*240., 480*480.]
