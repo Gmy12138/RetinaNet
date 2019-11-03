@@ -35,9 +35,9 @@ Evaluates the model on NEU-DET test.
 Uses pretrained weights to make predictions on images. The ResNet-50 measurement marked shows the inference time of this implementation on GPU 2080ti.
 
 
-| Backbone         |  Image Size     | GPU      | FPS      |
-|:----------------:|:---------------:|:--------:|:--------:|
-| ResNet-50        |     300         | 2080ti   |  27      |
+| Model        |Backbone      |  Image Size     | GPU      | FPS      | parameters (10<sup>6</sup>)|FLOPs (10<sup>9</sup>)|
+|:------------:|:------------:|:---------------:|:--------:|:--------:|:--------------------------:|:--------------------:|
+| RetinaNet    | ResNet-50   |     300         | 2080ti   |   27      |            35.84           |     37.43            | 
 
 
 
