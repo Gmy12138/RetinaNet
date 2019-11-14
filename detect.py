@@ -115,6 +115,9 @@ for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
             cls = label[i]
             cls_name = the_classes[int(cls)]
             pt = boxe[i]
+
+            pt[0] = pt[0] if pt[0] > 0 else 0
+            pt[1] = pt[1] if pt[1] > 0 else 0
             coords = (pt[0], pt[1]), pt[2] - pt[0] + 1, pt[3] - pt[1] + 1
             # print(pt)
             color = colors[int(cls)]
