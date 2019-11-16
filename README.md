@@ -8,7 +8,7 @@ The method of RetinaNet was used to perform defect detection on NEU surface defe
 
 ## Installation
 ##### Clone and install requirements
-    $ git clone https://github.com/Gmy12138/RetinaNet
+    $ git clone https://github.com/Gmy12138/RetinaNet.git
     $ cd RetinaNet/
     $ pip install -r requirements.txt
 
