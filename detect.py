@@ -61,6 +61,7 @@ os.makedirs("output", exist_ok=True)
 
 net = RetinaNet()
 net.load_state_dict(torch.load(args.trained_model))
+net.cuda()
 
 
 dataloader = DataLoader(
@@ -72,11 +73,12 @@ dataloader = DataLoader(
 
 TIME=0
 for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
-    prev_time = time.time()
+
 
     if torch.cuda.is_available():
         input_imgs = input_imgs.cuda()
 
+    prev_time = time.time()
     loc_preds, cls_preds = net(input_imgs)
 
     # print('Decoding..')
